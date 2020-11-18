@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./api/models/manager.js"></script>
     <title>Subscribe</title>
 </head>
 <body>
@@ -24,9 +25,15 @@
                 Password: <input id = "password">
             </p></br>
             <p>
-                Role (Manager=1, Member=0): <INPUT TYPE="NUMBER" MIN="0" MAX="1" STEP="1" VALUE="0" SIZE="6">
-            </p>
-            <button class="btn">Sign Up</button>
+                Image (PATH): <input id = "image" type="image">
+            </p></br>
+            <button onclick="addMemberFunction()" class="btn">Sign Up</button>
+            <!-- <script>
+                function router.post("/signup"){
+                    document.getElementById("name").innerHTML = parseInt(document.getElementById("name").innerHTML) + 1;
+                    localStorage.setItem("key", parseInt(document.getElementById("name").innerHTML));
+                }
+            </script> -->
             <a href="index.html" class="btn">Back to Sign In</a>
             <a href="display.html" class="btn">Skip to Display</a>
             </div>

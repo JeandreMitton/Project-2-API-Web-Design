@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 // Creating Schema defining what product will look like
 const managerSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,   //Long string as Serial ID not number
-//   manager: {type: mongoose.Schema.Types.ObjectId, ref: 'Manager', required: true},
-//  name: {type: String, required: true},
-//   role: {type: Number, default: 1}
+    name: {type: String, required: true},
+    surname: {type: String, required: true},
+    email: {type:String, required: true, unique: true},
+    password: {type:String, required: true}//,
+   // image: {type: Image(Number, Number), required: true}
 });
 
 // Exporting Schema(Layout of object) wrapped into model(Object itself)
