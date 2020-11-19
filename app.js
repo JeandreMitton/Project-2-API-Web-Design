@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const memberRoutes = require('./api/routes/members');
 const managerRoutes = require('./api/routes/managers');
+app.use(express.static('./public'));
 
 // Connecting to MongoDB through application
 mongoose.connect('mongodb+srv://admin:'+ process.env.MONGO_ATLAS_PW + '@tester.utkji.mongodb.net/tester?retryWrites=true&w=majority',
