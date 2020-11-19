@@ -12,30 +12,27 @@
         <div class="container showcase-inner">
             <h1>Welcome to Mitton's Member Management</h1>
             <p>Please complete the following form to sign up for a membership</p></br>
-            <p>
-                Name: <input id = "name">
-            </p></br>
-            <p>
-                Surname: <input id = "surname">
-            </p></br>
-            <p>
-                Email: <input id = "email">
-            </p></br>
-            <p>
-                Password: <input id = "password">
-            </p></br>
-            <p>
-                Image (PATH): <input id = "image" type="image">
-            </p></br>
-            <button onclick="addMemberFunction()" class="btn">Sign Up</button>
-            <!-- <script>
-                function router.post("/signup"){
-                    document.getElementById("name").innerHTML = parseInt(document.getElementById("name").innerHTML) + 1;
-                    localStorage.setItem("key", parseInt(document.getElementById("name").innerHTML));
-                }
-            </script> -->
-            <a href="index.html" class="btn">Back to Sign In</a>
-            <a href="display.html" class="btn">Skip to Display</a>
+            <form action="/managers" href="display.html" method="POST">
+                <p>
+                    Name: <input type="text" name = "name" placeholder="john" required="true">
+                </p></br>
+                <p>
+                    Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                </p></br>
+                <p>
+                    Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                </p></br>
+                <p>
+                    Password: <input type="text" name = "password" placeholder="password" required="true">
+                </p></br>
+                <!-- <p>
+                    Image (PATH): <input id = "image" type="image">
+                </p></br> -->
+                <button type= "submit" class="btn">Sign Up</button>
+                <script>src="api/routes/managers.js"</script>
+                <a href="index.html" class="btn">Back to Sign In</a>
+                <a href="display.html" class="btn">Skip to Display</a>
+            </form>
             </div>
         </header>   
 </body>

@@ -31,7 +31,7 @@ const upload = multer({
 
 const Member = require('../models/member');
 
-router.get('/', (req, res, next) => {
+router.get('/', checkAuth,(req, res, next) => {
     Member.find()
     .select("name surname email image")
     .exec()
@@ -62,7 +62,7 @@ router.get('/', (req, res, next) => {
     })
 });
 
-router.post('/', /*checkAuth, upload.single('image'),*/ (req, res, next) => {
+router.post('/', checkAuth,/* upload.single('image'),*/ (req, res, next) => {
    
     const member = new Member({
         _id: new mongoose.Types.ObjectId(),

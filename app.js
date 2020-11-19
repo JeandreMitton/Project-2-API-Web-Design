@@ -8,7 +8,7 @@ const memberRoutes = require('./api/routes/members');
 const managerRoutes = require('./api/routes/managers');
 
 // Connecting to MongoDB through application
-mongoose.connect('mongodb+srv://Project-admin:'+process.env.MONGO_ATLAS_PW+'@project-2-db.1hx0d.mongodb.net/<dbname>?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://admin:'+ process.env.MONGO_ATLAS_PW + '@tester.utkji.mongodb.net/tester?retryWrites=true&w=majority',
         {
          useMongoClient: true
         });
@@ -16,7 +16,7 @@ mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 // Makes uplaods folder public so everybody can access it
-app.use('/uploads',express.static('uploads'));
+app.use('/img',express.static('img'));
 app.use(bodyParser.urlencoded({extended: false}));  // Will extract url data to be easily readable
 app.use(bodyParser.json());                         // Will extract json data to be easily readable
 
