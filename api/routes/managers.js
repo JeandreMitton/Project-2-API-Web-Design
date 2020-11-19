@@ -134,7 +134,6 @@ router.post("/signup", checkAuth, /*upload.single('image'),*/ (req, res, next) =
                         res.status(200).json({
                             message: 'Manager created'
                         });
-                        res.render("display");
                     })
                     .catch(err => {
                         console.log(err);
