@@ -12,7 +12,7 @@
         <div class="container showcase-inner">
             <h1>Welcome to Mitton's Member Management</h1>
             <p>Please complete the following form to sign up for a membership</p></br>
-            <form action="../app.js/managers" method="POST">
+            <form action="../managers/signup" method="POST">
                 <p>
                     Name: <input type="text" name = "name" placeholder="john" required="true">
                 </p></br>
@@ -28,10 +28,11 @@
                 <!-- <p>
                     Image (PATH): <input id = "image" type="image">
                 </p></br> -->
-                <script>src="api/routes/managers.js"</script>
+                <button type="submit" class="btn btn-primary">Submit</button></br>
                 <a href="index.html" class="btn">Back to Sign In</a>
                 <a href="display.html" class="btn">Skip to display</a>
             </form>
+            <script>src="api/routes/managers.js"</script>
             </div>
         </header>   
 </body>

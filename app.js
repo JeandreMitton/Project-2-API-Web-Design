@@ -6,6 +6,15 @@ const mongoose = require('mongoose');
 
 const memberRoutes = require('./api/routes/members');
 const managerRoutes = require('./api/routes/managers');
+//trying to send JWT in header
+/*
+const headers = () => {
+    const h = new Headers();
+
+    h.append('Content-Type', 'application/json');
+
+    return h;
+}*/
 
 // Connecting to MongoDB through application
 mongoose.connect('mongodb+srv://admin:'+ process.env.MONGO_ATLAS_PW + '@tester.utkji.mongodb.net/tester?retryWrites=true&w=majority',
