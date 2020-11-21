@@ -10,19 +10,86 @@
         <div class="container">
             <nav class="navbar">
                 <ul>
-                    <li><button class="btn" >GET</button></li>
-                    <li><button class="btn" >POST</button></li>
-                    <li><button class="btn" >DELETE</button></li>
-                    <li><button class="btn" >PATCH</button></li>
+                    <li><a href="#GET">GET</a></li>
+                    <li><a href="#POST">POST</a></li>
+                    <li><a href="#PATCH">PATCH</a></li>
+                    <li><a href="#DELETE">DELETE</a></li>
+                    <li><img src="../img/hellblade-wallpaper-1920x1080.jpg" alt="Person"></li>
                 </ul>
             </nav>
-            <header class="showcase">
-                <div class="container showcase-inner">
-                    <img src="img/hellblade-wallpaper-1920x1080.jpg" alt="Person">
-                    <h1>Welcome to Mitton's Member Management</h1>
-                    <p>Find the functions here</p></br>
-                </div>
-            </header>
+            <section id="GET">
+                <h1>Retreive member information</h1>
+                <form action="../app.js/members" method="GET">
+                    <p>
+                        ID: <input type="text" name = "name" placeholder="asjodg12312rf" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="POST">
+                <h1>Add new member</h1>
+                <form action="../app.js/members" method="POST">
+                    <p>
+                        Name: <input type="text" name = "name" placeholder="john" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="PATCH">
+                <h1>Update member information</h1>
+                <form action="../app.js/members" method="PATCH">
+                    <p>
+                        Name: <input type="text" name = "name" placeholder="john" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="DELETE">
+                <h1>Delete a member</h1>
+                <form action="../app.js/members" method="DELETE">
+                    <p>
+                        ID: <input type="text" name = "name" placeholder="asjodg12312rf" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
         </div>
 </body>
 </html>

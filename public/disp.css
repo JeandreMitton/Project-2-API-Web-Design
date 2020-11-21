@@ -31,6 +31,15 @@ body {
     background:rgba(36, 36, 36, 0.95);
 }
 
+.navbar img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: list-item;
+    height: 60px;
+}
+
 .navbar ul {
     display: flex;
     list-style: none;
@@ -43,54 +52,51 @@ body {
     padding: 1rem;
 }
 
-.navbar ul li .btn {
+.navbar ul li a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
 }
 
-.navbar ul li .btn:hover {
+.navbar ul li a:hover {
     color: rgb(255, 0, 119);
 }
 
-.showcase {
-    background-color: var(--primary-color);
-    color: #fff;
-    height: 100vh;
-    position: relative;
-}
-
-.showcase:before {
-    content: '';
-    background-image: url('img/test.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-.showcase .showcase-inner {
+section {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
     height: 100%;
-    opacity: 1;
-    transition: opacity 1s ease-in;
+    z-index: -1;
+   /* scroll-snap-align: center; */
 }
 
-.showcase h1 {
+section h1 {
     font-size: 4rem;
 }
 
-.showcase p {
-    font-size: 1.3rem;
+section p {
+    font-size: 1.5rem;
+}
+
+/* Section Images */
+section#GET {
+    background: url("../img/dishonored-wallpaper-1920x1080.jpg") no-repeat center center/cover;;
+}
+  
+section#POST {
+    background: url("../img/dead_space_5-wallpaper-1920x1080.jpg") no-repeat center center/cover;;
+}
+  
+section#PATCH {
+    background: url("../img/fallout_nuka_cola_collage-wallpaper-3840x2160.jpg") no-repeat center center/cover;;
+}
+  
+section#DELETE {
+    background: url("../img/purple_color_burst-wallpaper-3840x2160.jpg") no-repeat center center/cover;;
 }
 
 .btn {
@@ -101,17 +107,11 @@ body {
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
     text-decoration: underline;
+    text-decoration-color: rgba(255, 3, 129, 0.75);
     transition: opacity 1s ease-in;
 }
 
 .btn:hover {
     opacity: 0.7;
-    text-decoration-color: rgba(255, 3, 129, 0.75);
 }
-
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-  }
+  
