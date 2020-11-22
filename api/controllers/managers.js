@@ -1,4 +1,7 @@
 const Manager = require("../models/manager");
+const bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 exports.managers_get_all = (req, res, next) => {
     Manager.find()

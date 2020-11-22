@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const multer = require('multer');
-const bcrypt = require('bcrypt');
 const checkAuth = require('../middleware/check-auth');
-
-const jwt = require('jsonwebtoken');
 const ManagersController = require('../controllers/managers');
 
 const storage = multer.diskStorage({

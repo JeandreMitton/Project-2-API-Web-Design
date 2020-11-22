@@ -1,4 +1,5 @@
 const Member = require('../models/member');
+const mongoose = require('mongoose');
 
 exports.get_members_all = (req, res, next) => {
     Member.find()
@@ -99,7 +100,7 @@ exports.get_this_member = (req, res, next) => {
 exports.patch_member = (req, res, next) => {
     const id = req.params.memberId
     const updateOps  = {};
-    for(const ops of req.body) {
+    for(const ops of Object.keys(req.body)) {
         updateOps[ops.propName] = ops.value;
     }
     Member.update({_id: id}, { $set: updateOps })
