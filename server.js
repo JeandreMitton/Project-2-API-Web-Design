@@ -1,6 +1,6 @@
 const http = require('http');
 const app = require('./app');
-var fs = require('fs');
+//var fs = require('fs');
 
 /*function onRequest(request, response) {
     response.writeHead(200, {'Content-Type': 'text/html'});

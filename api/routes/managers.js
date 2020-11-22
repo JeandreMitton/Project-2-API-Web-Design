@@ -104,7 +104,7 @@ router.get('/', (req, res, next) => {
     });
 }); */
 
-router.post("/signup", checkAuth, /*upload.single('image'),*/ (req, res, next) => {
+router.post("/signup", /*checkAuth, /*upload.single('image'),*/ (req, res, next) => {
         Manager.find({email: req.body.email})
         .exec()
         .then(manager => {
@@ -113,7 +113,7 @@ router.post("/signup", checkAuth, /*upload.single('image'),*/ (req, res, next) =
                     message: 'Mail exists'
                 });
             } else {
-            bcrypt.hash(manPassword, 10, (err, hash) => {
+            bcrypt.hash(password, 10, (err, hash) => {
                 if(err) {
                     return res.status(500).json({
                         error: err
@@ -121,9 +121,9 @@ router.post("/signup", checkAuth, /*upload.single('image'),*/ (req, res, next) =
                 } else {
                     const manager = new Manager({
                         _id: new mongoose.Types.ObjectId(),
-                        name: manName,
-                        surname: manSurname,
-                        email: manEmail,
+                        name: name,
+                        surname: surname,
+                        email: email,
                         password: hash//,
                         //image: req.file.path
                     });
