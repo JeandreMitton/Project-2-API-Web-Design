@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./api/models/manager.js"></script>
+    <title>Subscribe</title>
+</head>
+<body>
+    <header class="showcase">
+        <div class="container showcase-inner">
+            <h1>Welcome to Mitton's Member Management</h1>
+            <p>Please complete the following form to sign up for a membership</p></br>
+            <form action="./managers/signup" method="POST">
+                <p>
+                    Name: <input type="text" name = "name" placeholder="john" required="true">
+                </p></br>
+                <p>
+                    Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                </p></br>
+                <p>
+                    Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                </p></br>
+                <p>
+                    Password: <input type="text" name = "password" placeholder="password" required="true">
+                </p></br>
+                <!-- <p>
+                    Image (PATH): <input id = "image" type="image">
+                </p></br> -->
+                <button type="submit" class="btn btn-primary">Submit</button></br>
+                <a href="index.html" class="btn">Back to Sign In</a>
+                <a href="display.html" class="btn">Skip to display</a>
+            </form>
+            <script>src="api/routes/managers.js"</script>
+            </div>
+        </header>   
+</body>
+</html>

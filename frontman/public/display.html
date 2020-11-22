@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="disp.css">
+    <title>Display</title>
+</head>
+<body>
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#GET">GET</a></li>
+                    <li><a href="#POST">POST</a></li>
+                    <li><a href="#PATCH">PATCH</a></li>
+                    <li><a href="#DELETE">DELETE</a></li>
+                    <li><img src="../img/hellblade-wallpaper-1920x1080.jpg" alt="Person"></li>
+                </ul>
+            </nav>
+            <section id="GET">
+                <h1>Retreive member information</h1>
+                <form action="../app.js/members" method="GET">
+                    <p>
+                        ID: <input type="text" name = "name" placeholder="asjodg12312rf" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="POST">
+                <h1>Add new member</h1>
+                <form action="../app.js/members" method="POST">
+                    <p>
+                        Name: <input type="text" name = "name" placeholder="john" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="PATCH">
+                <h1>Update member information</h1>
+                <form action="../app.js/members" method="PATCH">
+                    <p>
+                        Name: <input type="text" name = "name" placeholder="john" required="true">
+                    </p></br>
+                    <p>
+                        Surname: <input type="text" name = "surname" placeholder="Doe" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com" required="true">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+            <section id="DELETE">
+                <h1>Delete a member</h1>
+                <form action="../app.js/members" method="DELETE">
+                    <p>
+                        ID: <input type="text" name = "name" placeholder="asjodg12312rf" required="true">
+                    </p></br>
+                    <p>
+                        Email: <input type="text" name = "email" placeholder="123@123.com">
+                    </p></br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <p>
+                        Image (PATH): <input id = "image" type="image">
+                    </p></br> -->
+                    <!-- <script>src="api/routes/managers.js"</script> -->
+                </form>
+            </section>
+        </div>
+</body>
+</html>
