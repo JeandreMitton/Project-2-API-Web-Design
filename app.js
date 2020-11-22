@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const memberRoutes = require('./api/routes/members');
 const managerRoutes = require('./api/routes/managers');
+
 //trying to send JWT in header
 /*
 const headers = () => {
@@ -24,10 +25,8 @@ mongoose.connect('mongodb+srv://admin:'+ process.env.MONGO_ATLAS_PW + '@tester.u
         });
 mongoose.Promise = global.Promise;
 
-app.use(express.static('public'));
-
 app.use(morgan('dev'));
-// Makes img folder public so everybody can access it
+// Makes uplaods folder public so everybody can access it
 app.use('/img',express.static('img'));
 app.use(bodyParser.urlencoded({extended: false}));  // Will extract url data to be easily readable
 app.use(bodyParser.json());                         // Will extract json data to be easily readable
