@@ -1,4 +1,4 @@
-/*const express = require('express');
+const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -15,7 +15,7 @@ const headers = () => {
     h.append('X-User-Token, token);
 
     return h;
-}
+}*/
 
 // Connecting to MongoDB through application
 mongoose.connect('mongodb+srv://admin:'+ process.env.MONGO_ATLAS_PW + '@tester.utkji.mongodb.net/tester?retryWrites=true&w=majority',
@@ -65,4 +65,4 @@ app.use((error,req,res,next) => {
     });
 });
 
-module.exports = app; */
+module.exports = app; 
