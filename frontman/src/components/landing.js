@@ -28,7 +28,6 @@ export const Landing = () => {
 
     console.log(initialState)
     return(<div>
-        {initialState.length > 0 && initialState.map(e => <li>{e}</li>)}
+        {initialState.length > 0 && initialState.map((e,i) => <li key={i}>{e}</li>)}
     </div>)
-
 }
