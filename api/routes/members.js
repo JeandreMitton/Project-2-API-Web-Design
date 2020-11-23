@@ -34,7 +34,7 @@ router.get('/', checkAuth, MembersController.get_members_all);
 
 router.post('/', checkAuth,/* upload.single('image'),*/ MembersController.post_member);
 
-router.get('/:memberId', MembersController.get_this_member);
+router.get('/:memberId', checkAuth, MembersController.get_this_member);
 
 router.patch('/:memberId', checkAuth, MembersController.patch_member);
 
